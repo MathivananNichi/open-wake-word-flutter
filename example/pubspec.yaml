@@ -51,7 +51,29 @@ flutter:
     - assets/models/melspectrogram.onnx
     - assets/models/embedding_model.onnx
     - assets/models/hey_jarvis_v0.1.onnx
-
+    - assets/models/saran.onnx
+    - assets/models/HEY_T_T.onnx
+    - assets/models/HEY_T_T_v2.onnx
+    - assets/models/hey_t_t_v3.onnx
+    - assets/models/hey_t_t_v4.onnx
+    - assets/models/hey_t_t_v5.onnx
+    - assets/models/hey_t_t_v6.onnx
+    - assets/models/_HEY__TEE__TEE.onnx
+    - assets/models/hey_t_t_20260604_130156.onnx
+    - assets/models/hey_t_t_trial19_128x3_300000_20260605_041627.onnx
+    - assets/models/hey_t_t_20260603_164452.onnx
+    - assets/models/hey_t_t_20260603_111612.onnx
+    - assets/models/HeyTTalk.onnx
+    - assets/models/a_d_t_v7_ir9.onnx
+    - assets/models/A_T_T_v7_ir9.onnx
+    - assets/models/ei_titi_v7_ir9.onnx
+    - assets/models/hey_d_t_v7_ir9.onnx
+    - assets/models/Hey_Didi_v7_ir9.onnx
+    - assets/models/Hey_Kitty_v7_ir9.onnx
+    - assets/models/hey_t_d_v7_ir9.onnx
+    - assets/models/hey_t_t_v7_ir9.onnx
+    - assets/models/hey_tea_tea_v7_ir9.onnx
+    - assets/models/Hey_Teety_v7_ir9.onnx
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
