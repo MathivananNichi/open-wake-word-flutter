@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
   bool _isListening = false;
   bool _isActivated = false;
   double _probability = 0.0;
-  double _threshold = 0.5;
+  double _threshold = 0.44;
   final List<String> _detectionLogs = [];
 
   final AudioRecorder _audioRecorder = AudioRecorder();
@@ -78,7 +78,7 @@ class _MyAppState extends State<MyApp> {
         if (activated && !_isActivated) {
           final time = DateTime.now().toIso8601String().split('T').last.substring(0, 8);
 
-          final msg = "[$time] Wake word 'Hey TT' detected (prob: ${prob.toStringAsFixed(2)})";
+          final msg = "[$time] Wake word  detected (prob: ${prob.toStringAsFixed(2)})";
           print(msg);
           _detectionLogs.insert(0, msg);
         }
@@ -254,7 +254,7 @@ class _MyAppState extends State<MyApp> {
                     return Padding(
                       padding: const EdgeInsets.symmetric(vertical: 4.0),
                       child: Text(
-                        _detectionLogs[index],
+                       "${_detectionLogs.length-index} . "+ _detectionLogs[index],
                         textAlign: TextAlign.center,
                         style: const TextStyle(color: Colors.black87),
                       ),
