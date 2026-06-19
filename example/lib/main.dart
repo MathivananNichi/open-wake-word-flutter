@@ -66,18 +66,9 @@ void onStart(ServiceInstance service) async {
         'assets/models/hey_t_t_20260603_164452.onnx',
         'assets/models/hey_t_t_20260604_130156.onnx',
         'assets/models/hey_t_t_trial19_128x3_300000_20260605_041627.onnx',
-        'assets/models/HEY_T_T_v2.onnx',
-        'assets/models/hey_t_t_v3.onnx',
-        'assets/models/hey_t_t_v4.onnx',
-        'assets/models/hey_t_t_v5.onnx',
-        'assets/models/hey_t_t_v6.onnx',
-        'assets/models/a_d_t_v7_ir9.onnx',
-        'assets/models/A_T_T_v7_ir9.onnx',
         'assets/models/Hey_Didi_v7_ir9.onnx',
-        'assets/models/hey_d_t_v7_ir9.onnx',
-        'assets/models/hey_t_d_v7_ir9.onnx',
-        'assets/models/hey_t_t_v7_ir9.onnx',
-        'assets/models/hey_tea_tea_v7_ir9.onnx',
+        'assets/models/Hey_Kitty_v7_ir9.onnx',
+        'assets/models/hey_t_t_high_ir9.onnx',
       ],
     );
     service.invoke('log', {'msg': 'OpenWakeWord init success: $success'});
@@ -107,9 +98,7 @@ void onStart(ServiceInstance service) async {
         sampleRate: 16000,
         numChannels: 1,
         audioInterruption: AudioInterruptionMode.none,
-        androidConfig: AndroidRecordConfig(
-          audioSource: AndroidAudioSource.voiceRecognition,
-        ),
+        androidConfig: AndroidRecordConfig(audioSource: AndroidAudioSource.voiceRecognition),
       ),
     );
 
@@ -141,7 +130,7 @@ void onStart(ServiceInstance service) async {
   int loopCount = 0;
   double probability = 0.0;
   bool isActivated = false;
-  double threshold = 0.52;
+  double threshold = 0.41;
 
   Timer.periodic(const Duration(milliseconds: 100), (timer) async {
     loopCount++;
@@ -225,7 +214,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   bool _isListening = false;
   bool _isActivated = false;
   double _probability = 0.0;
-  double _threshold = 0.52;
+  double _threshold = 0.41;
   final List<String> _detectionLogs = [];
 
   late AnimationController _pulseController;
@@ -597,7 +586,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                                       children: [
                                         const Text(
                                           'Detection Logs',
-                                          style: TextStyle(color: Colors.white,fontSize: 17),
+                                          style: TextStyle(color: Colors.white, fontSize: 17),
                                         ),
                                         TextButton.icon(
                                           onPressed: () {

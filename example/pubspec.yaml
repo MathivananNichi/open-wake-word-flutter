@@ -52,6 +52,7 @@ flutter:
   assets:
     - assets/models/melspectrogram.onnx
     - assets/models/embedding_model.onnx
+    - assets/models/
     - assets/models/hey_jarvis_v0.1.onnx
     - assets/models/saran.onnx
     - assets/models/HEY_T_T.onnx
